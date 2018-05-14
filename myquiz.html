@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>my quiz</title>
+
+<script type="text/javascript">
+
+function myfun(){
+
+alert("Welcome to a Simple Quiz in Java Script. Rules are as follows:\n\n1.Answer only using a, b, c\n2.Leaving a question blank will be considered wrong.\n\nHit OK to continue.");
+
+var ques = [
+     {
+           prompt: "Where is Taj Mahal Located?\n(a) Agra\n\ (b) Rajasthan\n(c) Delhi",
+           ans: "a"
+     },
+     {
+          prompt: "Which Indian Cricketer became only the second cricketer in history to take 10 wickets in an Innings?\n(a) R.Ashwin\n\ (b) Bishan Singh Bedi\n(c) Anil Kumble",
+          ans: "c"
+     },
+     {
+          prompt: "Which city is famously known as city of Nawabs and Kebabs?\n(a) Lucknow\n\ (b) Hyderabad\n(c) Indore",
+          ans: "a"
+		  
+     },
+	 {
+          prompt: "What exactly is a black widow?\n(a) A woman\n\ (b) A spider\n(c) A phenomena",
+          ans: "b"
+		  
+     },
+	 {
+          prompt: "Which is the highest mountain peak in India?\n(a) Nanga Parbat\n\ (b) Kanchenjunga\n(c) Namcha Barwa",
+          ans: "b"
+		  
+     }
+];
+var score = 0;
+
+for(var i = 0; i < ques.length; i++){
+     var res = window.prompt(ques[i].prompt);
+     if(res == ques[i].ans){
+          score++;
+          alert("Correct!");
+     } else {
+          alert("WRONG!");
+     }
+}
+alert("your score is: " + score + "/" + ques.length);
+
+}
+</script>
+<body onload="myfun()">
+Thank You For Playing.
+</body>
+</head>
+</html>
